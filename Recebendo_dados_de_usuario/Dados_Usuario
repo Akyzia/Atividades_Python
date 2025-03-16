@@ -1,0 +1,52 @@
+"""
+Recebendo dados do usuario
+
+input() -> Todo dado recebido via input do tipo String
+
+Em python, string é tudo que estiver entre:
+-Aspas simples;
+-Aspas duplas;
+-Aspas simples triplas;
+-Aspas duplas triplas;
+
+Exemplo:
+-Aspas simples -> 'Angelina Jolie'
+-Aspas duplas -> "Angelina Jolie"
+-Aspas simples triplas -> '''Angelina Jolie'''
+
+"""
+#Aspas duplas triplas -> """Angelina Jolie"""
+
+#entrada de dados
+print('Qual seu nome?')
+nome = input() #input -> entrada
+
+#processamento
+
+#saída de dados
+#exemplo de print 'antigo' versão 2.x do python
+#print('Seja bem-vindo(a) %s' % nome)
+
+#versão mais moderna do python / preferivel
+print('Seja bem-vindo(a) {0}'.format(nome))
+
+print('Qual é a sua idade?')
+idade = input()
+
+#processamento
+
+#saida
+#quando tem uma variável só não precisa do parenteses
+#se tem duas ou mais, precisa de parenteses
+#versao antiga do python
+#print('A %s tem %s anos' % (nome, idade))
+
+#Exemplo de print mais atual versão 3.x python
+#print('A {0} tem {1} anos'.format(nome, idade))
+
+#exemplo de print moderno 3.x do python
+print(f'A{none} tem {idade} anos')
+
+"""
+#int(idade) => cast
+"""
