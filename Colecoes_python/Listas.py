@@ -34,6 +34,9 @@ lista4 = list(range(11))
 
 lista5 = list('Geek University')
 
+#também aceitas listas assim
+lista6 = [1, 2 , 3.2, True, 'Geek', [1, 2 , 5], 145236]
+
 #Podemos facilmente checar se determinado valor está contido na lista
 num = 18
 if num in lista4:
@@ -80,7 +83,7 @@ print(lista1)
 lista1 = lista1 + lista2 #utilizar o + faz a mesma coisa que o extend
 print(lista1)
 
-
+#Forma1
 #se eu quiser a lista ao contrário por exemplo
 lista1.reverse()
 lista2.reverse()
@@ -88,6 +91,78 @@ lista2.reverse()
 print(lista1)
 print(lista2)
 
+#Forma2
 #dessa forma também deixa a lista ao contrário
 print(lista1[::-1])#slice  (começa na posição 0 e vai até o final = ::, -1 = reverte)
 print(lista2[::-1])#slice
+
+#também pode-se copiar uma lista
+lista6 = lista2.copy()
+print(lista6)
+
+#saber o numero de elementos em uma lista
+print(len(lista1))
+
+#remover o ultimo elemento da lista com pop
+print(lista5)
+lista5.pop()
+print(lista5)
+
+#remover um elemento pelo indice
+#Obs.: Os elementos a direita deste indice serão deslocados para a esquerda
+#Obs.: Se não houver elementos no indice informado, teremos o erro IndexError
+lista5.pop(2)
+print(lista5)
+
+#Podemos remover todos os elementos (zerar a lista)
+print(lista5)
+lista5.clear()
+print(lista5)
+
+#repetir elementos em uma lista
+nova = [1, 2, 3]
+print(nova)
+nova = nova * 3
+print(nova)
+
+#split
+#Obs.: Por padrão, o split separa os elementos da lista pelo espaço entre elas
+curso = "programação teste"
+print(curso)
+curos = curso.split()
+print(curso)
+
+#convertendo uma lista em uma string
+lista6 = ['Programação', 'em', 'Python', 'Essencial']
+print(lista6)
+
+#abaixo estamos falando: Pega a lista6, coloca espaço entre cada elemento e transforma em uma string
+curso = ' '.join(lista6)
+print(curso)
+
+#abaixo estamos falando: Pega a lista6, coloca cifrão entre cada elemento e transforma em string
+curso = '$'.join(lista6)
+print(curso)
+
+#iterando sobre listas
+#exemplo1 utilizando for
+#para cada elemento dentro da lista, imprima esse elemento para mim
+soma = 0
+for elemento in lista1:
+    print(elemento)
+    some = soma + elemento
+print(soma)
+
+#exemplo2 utilizando while
+carrinho = []#lista vazia
+produto = ''
+
+while produto != 'sair':
+    print("Adicione um produto na lista ou digite 'sair' para sair: ")
+    produto = input()
+    if produto != 'sair':
+        carrinho.append(produto)
+#quando digitar 'sair' vou para o loop do for
+
+for produto in carrinho
+    print(produto)
